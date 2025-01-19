@@ -45,6 +45,4 @@ enum CameraHUDLUT {
 void set_hud_camera_status(s16 status);
 void render_hud(void);
 
-void render_bottom_text_box(void);
-
 #endif // HUD_H

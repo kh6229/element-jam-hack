@@ -533,30 +533,6 @@ void render_hud_camera_status(void) {
     gSPDisplayList(gDisplayListHead++, dl_hud_img_end);
 }
 
-u16 frames = 0;
-u8  textIsRendering = 0;
-
-void render_bottom_text(void) {
-    char text[256];
-    sprintf(text, "This is a test.");
-    print_small_text_light((SCREEN_WIDTH / 2), 180, text, PRINT_TEXT_ALIGN_CENTRE, PRINT_ALL, FONT_VANILLA);
-}
-
-void render_bottom_text_box(void) {
-    if (frames < 60 && textIsRendering != 0) {
-        prepare_blank_box();
-        render_blank_box(36, 160, (SCREEN_WIDTH - 36), SCREEN_HEIGHT - 12, 0, 0, 0, 128);
-        finish_blank_box();
-
-        render_bottom_text();
-        frames++;
-    } else {
-        textIsRendering = 0;
-        frames = 0;
-    }
-
-}
-
 /**
  * Render HUD strings using hudDisplayFlags with it's render functions,
  * excluding the cannon reticle which detects a camera preset for it.
@@ -637,14 +613,6 @@ void render_hud(void) {
             render_debug_mode();
         }
 #endif
-    }
-
-    if (gPlayer1Controller->buttonPressed & L_TRIG) {
-            textIsRendering = 1;
-        }
-
-    if (textIsRendering != 0) {
-        render_bottom_text_box();
     }
 }
 
