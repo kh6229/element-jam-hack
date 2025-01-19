@@ -4,7 +4,7 @@
 #define MODEL_NONE                             0x00
 
 /* fast64 object exports get inserted here */
-#define MODEL_ALIEN_STAR                  228
+#define MODEL_ALIEN_STAR                       0xE4
 
 /* Global models that are loaded for every level */
 
