@@ -6082,3 +6082,14 @@ const BehaviorScript bhvTextTrigger[] = {
         CALL_NATIVE(bhv_text_trigger_loop),
     END_LOOP(),
 };
+
+const BehaviorScript bhvDeadVine[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    LOAD_COLLISION_DATA(dead_vine_collision),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_SET_FACE_ANGLE_TO_MOVE_ANGLE),
+    CALL_NATIVE(bhv_dead_vine_init),
+    BEGIN_LOOP(),
+        CALL_NATIVE(load_object_collision_model),
+        CALL_NATIVE(bhv_dead_vine_loop),
+    END_LOOP(),
+};
