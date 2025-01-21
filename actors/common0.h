@@ -201,4 +201,10 @@ extern const Collision unknown_seg8_collision_080262F8[];
 
 #include "glow/geo_header.h"
 
+#include "chill_flame/geo_header.h"
+
+#include "dead_vine/collision_header.h"
+
+#include "dead_vine/geo_header.h"
+
 #endif

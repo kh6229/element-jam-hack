@@ -31,3 +31,5 @@
 #include "alien_star/geo.inc.c"
 #include "alien_star_transparent/geo.inc.c"
 #include "glow/geo.inc.c"
+#include "chill_flame/geo.inc.c"
+#include "dead_vine/geo.inc.c"

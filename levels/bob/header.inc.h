@@ -52,7 +52,7 @@ extern Gfx bob_dl_Cube_002_mesh_layer_1_tri_2[];
 extern Vtx bob_dl_Cube_002_mesh_layer_1_vtx_3[288];
 extern Gfx bob_dl_Cube_002_mesh_layer_1_tri_3[];
 extern Vtx bob_dl_Cube_003_mesh_layer_1_vtx_cull[8];
-extern Vtx bob_dl_Cube_003_mesh_layer_1_vtx_0[32];
+extern Vtx bob_dl_Cube_003_mesh_layer_1_vtx_0[52];
 extern Gfx bob_dl_Cube_003_mesh_layer_1_tri_0[];
 extern Vtx bob_dl_Cylinder_mesh_layer_1_vtx_cull[8];
 extern Vtx bob_dl_Cylinder_mesh_layer_1_vtx_0[570];

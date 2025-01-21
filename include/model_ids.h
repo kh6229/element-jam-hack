@@ -4,6 +4,8 @@
 #define MODEL_NONE                             0x00
 
 /* fast64 object exports get inserted here */
+#define MODEL_DEAD_VINE                        0xE8
+#define MODEL_CHILL_FLAME                      0xE7
 #define MODEL_GLOW                             0xE6
 #define MODEL_ALIEN_STAR_TRANSPARENT           0xE5
 #define MODEL_ALIEN_STAR                       0xE4
