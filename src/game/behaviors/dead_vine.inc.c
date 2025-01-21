@@ -26,12 +26,14 @@ void bhv_dead_vine_disappear(void) {
 }
 
 void bhv_dead_vine_loop(void) {
-    if (o->oDistanceToMario < 500) {
+    struct Object *chillFlameObj = cur_obj_nearest_object_with_behavior(bhvChillFlame);
+    
+    if (o->oDistanceToMario < 500 && chillFlameObj->oHeldState == HELD_HELD) {
         bhv_dead_vine_disappear();
     }
 }
 
 void bhv_dead_vine_init(void) {
-    o->oShrinkTimer = 0;
-    o->oVineScale   = 1.0f;
+    o->oShrinkTimer   = 0;
+    o->oVineScale     = 1.0f;
 }

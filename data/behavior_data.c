@@ -6086,7 +6086,7 @@ const BehaviorScript bhvTextTrigger[] = {
 const BehaviorScript bhvDeadVine[] = {
     BEGIN(OBJ_LIST_SURFACE),
     LOAD_COLLISION_DATA(dead_vine_collision),
-    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_SET_FACE_ANGLE_TO_MOVE_ANGLE),
+    OR_INT(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_SET_FACE_ANGLE_TO_MOVE_ANGLE)),
     CALL_NATIVE(bhv_dead_vine_init),
     BEGIN_LOOP(),
         CALL_NATIVE(load_object_collision_model),
@@ -6094,4 +6094,13 @@ const BehaviorScript bhvDeadVine[] = {
     END_LOOP(),
 };
 
-// const BehaviorScript bhv
+const BehaviorScript bhvChillFlame[] = {
+    BEGIN(OBJ_LIST_GENACTOR),
+    OR_INT(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE | OBJ_FLAG_HOLDABLE | OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW)),
+    DROP_TO_FLOOR(),
+    SET_HOME(),
+    CALL_NATIVE(bhv_chill_flame_init),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_chill_flame_loop),
+    END_LOOP(),
+};
