@@ -29,7 +29,7 @@ void bhv_dead_vine_disappear(void) {
 }
 
 void bhv_dead_vine_loop(void) {
-    if (o->oDistanceToMario < 100) {
+    if (o->oDistanceToMario < 500) {
         bhv_dead_vine_disappear();
     }
 }

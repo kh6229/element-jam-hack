@@ -6093,3 +6093,5 @@ const BehaviorScript bhvDeadVine[] = {
         CALL_NATIVE(bhv_dead_vine_loop),
     END_LOOP(),
 };
+
+// const BehaviorScript bhv
