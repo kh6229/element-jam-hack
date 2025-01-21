@@ -141,7 +141,7 @@ feel slightly more at ease in this eerie cave.",
 
     "As you descend deeper, you find more of those vines\n\
 hanging from the ceiling. You were able to walk on them\n\
-no problem, maybe you climb these?",
+with no problem, maybe you climb these?",
 };
 
 void render_bottom_box_text(u8 ID) {
