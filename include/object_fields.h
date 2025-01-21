@@ -1255,6 +1255,9 @@
 #define /*0x0FC*/ oYoshiChosenHome OBJECT_FIELD_S32(0x1D)
 #define /*0x100*/ oYoshiTargetYaw  OBJECT_FIELD_S32(0x1E)
 
+/* Dead Vine */
+#define           oShrinkTimer OBJECT_FIELD_S32(0x1B)
+#define           oVineScale   OBJECT_FIELD_F32(0x1C)
 
 /*Custom general defines:
 

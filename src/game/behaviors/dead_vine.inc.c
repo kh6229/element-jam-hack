@@ -1,6 +1,3 @@
-u8 timer = 0;
-f32 scale = 1.0f;
-
 static struct SpawnParticlesInfo sDeadVineParticles = {
     /* behParam:        */ 3,
     /* count:           */ 3,
@@ -17,10 +14,10 @@ static struct SpawnParticlesInfo sDeadVineParticles = {
 };
 
 void bhv_dead_vine_disappear(void) {
-    if (timer < 45) {
-        scale -= 0.015f;
-        cur_obj_scale(scale);
-        timer++;
+    if (o->oShrinkTimer < 45) {
+        o->oVineScale -= 0.015f;
+        cur_obj_scale(o->oVineScale);
+        o->oShrinkTimer++;
     } else {
         cur_obj_play_sound_2(SOUND_OBJ_ENEMY_DEFEAT_SHRINK);
         cur_obj_spawn_particles(&sDeadVineParticles);
@@ -35,5 +32,6 @@ void bhv_dead_vine_loop(void) {
 }
 
 void bhv_dead_vine_init(void) {
-
+    o->oShrinkTimer = 0;
+    o->oVineScale   = 1.0f;
 }
