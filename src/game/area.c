@@ -43,6 +43,8 @@ s16 gSavedCourseNum;
 s16 gMenuOptSelectIndex;
 s16 gSaveOptSelectIndex;
 
+u8 gTextIsRendering;
+
 struct SpawnInfo *gMarioSpawnInfo = &gPlayerSpawnInfos[0];
 struct GraphNode **gLoadedGraphNodes = gGraphNodePointers;
 struct Area *gAreas = gAreaData;
@@ -95,6 +97,81 @@ const char *gNoControllerMsg[] = {
     "CONTROLLER FEHLT",
 };
 #endif
+
+const char *gTextIDs[] = {
+    "NULL",
+
+    "Well, here you are, you reached the cave you were told\n\
+to go. You can't help but feel strange, seeing the rocks\n\
+around you. This must be the material you're looking for.",
+
+    "A power star? No, this is something entirely different.\n\
+It's cold to the touch, and if it weren't for your gloves, your\n\
+hands would freeze. You might as well collect it.",
+
+    "You feel a sense of dread as you approach these pits.\n\
+They glow a bright teal, with an unknown substance inside.\n\
+It reminds you of lava, but it was too cold to be lava...",
+
+    "A fork in the road... you find yourself hesitant to go\n\
+in either path. Still, the only way you can move is forward.\n\
+It's just a matter of which way to go.",
+
+    "Another one of these 'stars?'\n\
+Maybe these could be useful to bring back?",
+
+    "You take a look at the vines... tubes... whatever they\n\
+are, around you. They're moving, pulsating slowly. They send\n\
+a shiver down your spine. They look almost alien to you.",
+
+    "Do you even want to go on? Your mind is screaming at you\n\
+that you shouldn't, but it's what you need to do. You feel\n\
+so out of your element, like you were never meant to be here.",
+
+    "The more vines you see, the more uneasy you feel. In fact,\n\
+They're starting to make you sick. You can feel your body\n\
+start to ache and weaken. Will you be able to leave alive?",
+
+    "You look around and notice glowing orbs in some spots.\n\
+What are they? You might as well collect these too, could\n\
+be valuable to bring back.",
+
+    "Thank goodness, a way to recover. With this heart, you\n\
+feel slightly more at ease in this eerie cave.",
+
+    "As you descend deeper, you find more of those vines\n\
+hanging from the ceiling. You were able to walk on them\n\
+no problem, maybe you climb these?",
+};
+
+void render_bottom_box_text(u8 ID) {
+    char text[256];
+    sprintf(text, gTextIDs[ID]);
+    print_small_text_light(SCREEN_WIDTH / 2, 178, text, PRINT_TEXT_ALIGN_CENTRE, PRINT_ALL, FONT_VANILLA);
+}
+
+u16 frames = 0;
+u8 currentID;
+
+void render_bottom_box() {
+    if (gTextIsRendering != currentID) {
+        frames = 0;
+    }
+
+    if (frames < 240) {
+        prepare_blank_box();
+        render_blank_box(16, 170, (SCREEN_WIDTH - 16), (SCREEN_HEIGHT - 16), 0, 0, 0, 168);
+        finish_blank_box();
+
+        render_bottom_box_text(gTextIsRendering);
+        frames++;
+    } else {
+        gTextIsRendering = 0;
+        frames = 0;
+    }
+
+    currentID = gTextIsRendering;
+}
 
 void override_viewport_and_clip(Vp *vpOverride, Vp *vpClip, Color red, Color green, Color blue) {
     RGBA16 color = ((red >> 3) << IDX_RGBA16_R) | ((green >> 3) << IDX_RGBA16_G) | ((blue >> 3) << IDX_RGBA16_B) | MSK_RGBA16_A;
@@ -468,4 +545,7 @@ void render_game(void) {
 #ifdef PUPPYPRINT_DEBUG
     puppyprint_render_profiler();
 #endif
+    if (gTextIsRendering > 0) {
+        render_bottom_box();
+    }
 }

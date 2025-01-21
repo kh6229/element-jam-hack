@@ -197,4 +197,8 @@ extern const Collision unknown_seg8_collision_080262F8[];
 
 #include "alien_star/geo_header.h"
 
+#include "alien_star_transparent/geo_header.h"
+
+#include "glow/geo_header.h"
+
 #endif

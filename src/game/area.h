@@ -171,6 +171,8 @@ extern s16 gSavedCourseNum;
 extern s16 gMenuOptSelectIndex;
 extern s16 gSaveOptSelectIndex;
 
+extern u8 gTextIsRendering;
+
 extern struct SpawnInfo *gMarioSpawnInfo;
 
 extern struct Area *gAreas;
@@ -179,6 +181,7 @@ extern struct Area *gCurrentArea;
 extern s16 gCurrSaveFileNum;
 extern s16 gCurrLevelNum;
 
+void render_bottom_box();
 
 void override_viewport_and_clip(Vp *a, Vp *b, u8 c, u8 d, u8 e);
 void print_intro_text(void);

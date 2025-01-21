@@ -1,0 +1,7 @@
+extern const GeoLayout alien_star_transparent_geo[];
+extern Vtx alien_star_transparent_Cube_001_mesh_layer_5_vtx_cull[8];
+extern Vtx alien_star_transparent_Cube_001_mesh_layer_5_vtx_0[28];
+extern Gfx alien_star_transparent_Cube_001_mesh_layer_5_tri_0[];
+extern Gfx mat_alien_star_transparent_f3dlite_material_002[];
+extern Gfx mat_revert_alien_star_transparent_f3dlite_material_002[];
+extern Gfx alien_star_transparent_Cube_001_mesh_layer_5[];

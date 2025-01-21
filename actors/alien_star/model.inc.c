@@ -573,7 +573,7 @@ Gfx alien_star_Cube_mesh_layer_1_tri_0[] = {
 };
 
 
-Gfx mat_alien_star_f3dlite_material[] = {
+Gfx mat_alien_star_f3dlite_material_001[] = {
 	gsSPGeometryMode(G_LIGHTING, 0),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, ENVIRONMENT, 0, SHADE, 0, TEXEL0, 0, SHADE, 0, ENVIRONMENT, 0, SHADE, 0),
@@ -587,7 +587,7 @@ Gfx mat_alien_star_f3dlite_material[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_alien_star_f3dlite_material[] = {
+Gfx mat_revert_alien_star_f3dlite_material_001[] = {
 	gsSPGeometryMode(0, G_LIGHTING),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
@@ -599,9 +599,9 @@ Gfx alien_star_Cube_mesh_layer_1[] = {
 	gsSPVertex(alien_star_Cube_mesh_layer_1_vtx_cull + 0, 8, 0),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPCullDisplayList(0, 7),
-	gsSPDisplayList(mat_alien_star_f3dlite_material),
+	gsSPDisplayList(mat_alien_star_f3dlite_material_001),
 	gsSPDisplayList(alien_star_Cube_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_alien_star_f3dlite_material),
+	gsSPDisplayList(mat_revert_alien_star_f3dlite_material_001),
 	gsDPPipeSync(),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPClearGeometryMode(G_TEXTURE_GEN),

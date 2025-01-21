@@ -81,3 +81,5 @@ UNUSED static const u64 binid_17 = 17;
 UNUSED static const u64 binid_18 = 18;
 
 #include "alien_star/model.inc.c"
+#include "alien_star_transparent/model.inc.c"
+#include "glow/model.inc.c"

@@ -174,6 +174,8 @@ static const LevelScript script_exec_ ## folder [] = { \
 #undef DEFINE_LEVEL
 
 const LevelScript script_func_global_1[] = {
+    LOAD_MODEL_FROM_GEO(MODEL_GLOW, glow_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_ALIEN_STAR_TRANSPARENT, alien_star_transparent_geo),
     LOAD_MODEL_FROM_GEO(MODEL_ALIEN_STAR, alien_star_geo),
     LOAD_MODEL_FROM_GEO(MODEL_BLUE_COIN_SWITCH,        blue_coin_switch_geo),
     LOAD_MODEL_FROM_GEO(MODEL_AMP,                     dAmpGeo),

@@ -29,3 +29,5 @@
 #include "koopa_shell/geo.inc.c"
 
 #include "alien_star/geo.inc.c"
+#include "alien_star_transparent/geo.inc.c"
+#include "glow/geo.inc.c"
