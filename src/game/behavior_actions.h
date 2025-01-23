@@ -556,6 +556,7 @@ void bhv_dead_vine_init(void);
 void bhv_dead_vine_loop(void);
 void bhv_chill_flame_loop(void);
 void bhv_chill_flame_init(void);
+void bhv_lava_pool_loop(void);
 
 Gfx *geo_move_mario_part_from_parent(s32 callContext, UNUSED struct GraphNode *node, Mat4 mtx);
 

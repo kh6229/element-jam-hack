@@ -6104,3 +6104,13 @@ const BehaviorScript bhvChillFlame[] = {
         CALL_NATIVE(bhv_chill_flame_loop),
     END_LOOP(),
 };
+
+const BehaviorScript bhvLavaPool[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, (OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE | OBJ_FLAG_COMPUTE_DIST_TO_MARIO)),
+    LOAD_COLLISION_DATA(lava_pool_collision),
+    BEGIN_LOOP(),
+        CALL_NATIVE(load_object_collision_model),
+        CALL_NATIVE(bhv_lava_pool_loop),
+    END_LOOP(),
+};

@@ -207,4 +207,8 @@ extern const Collision unknown_seg8_collision_080262F8[];
 
 #include "dead_vine/geo_header.h"
 
+#include "lava_pool/collision_header.h"
+
+#include "lava_pool/geo_header.h"
+
 #endif

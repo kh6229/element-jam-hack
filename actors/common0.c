@@ -86,3 +86,5 @@ UNUSED static const u64 binid_18 = 18;
 #include "chill_flame/model.inc.c"
 #include "dead_vine/collision.inc.c"
 #include "dead_vine/model.inc.c"
+#include "lava_pool/collision.inc.c"
+#include "lava_pool/model.inc.c"

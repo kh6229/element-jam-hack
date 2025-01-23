@@ -174,6 +174,7 @@ static const LevelScript script_exec_ ## folder [] = { \
 #undef DEFINE_LEVEL
 
 const LevelScript script_func_global_1[] = {
+    LOAD_MODEL_FROM_GEO(MODEL_LAVA_POOL, lava_pool_geo),
     LOAD_MODEL_FROM_GEO(MODEL_DEAD_VINE, dead_vine_geo),
     LOAD_MODEL_FROM_GEO(MODEL_CHILL_FLAME, chill_flame_geo),
     LOAD_MODEL_FROM_GEO(MODEL_GLOW, glow_geo),
