@@ -14,7 +14,7 @@ static struct SpawnParticlesInfo sDeadVineParticles = {
 };
 
 void bhv_dead_vine_disappear(void) {
-    if (o->oShrinkTimer < 45) {
+    if (o->oShrinkTimer < 45 * (o->oBehParams2ndByte + 1)) {
         o->oVineScale -= 0.015f;
         cur_obj_scale(o->oVineScale);
         o->oShrinkTimer++;
@@ -28,12 +28,14 @@ void bhv_dead_vine_disappear(void) {
 void bhv_dead_vine_loop(void) {
     struct Object *chillFlameObj = cur_obj_nearest_object_with_behavior(bhvChillFlame);
     
-    if (o->oDistanceToMario < 400 && chillFlameObj->oHeldState == HELD_HELD) {
+    if (o->oDistanceToMario < o->oVineDistToMario && chillFlameObj->oHeldState == HELD_HELD) {
         bhv_dead_vine_disappear();
     }
 }
 
 void bhv_dead_vine_init(void) {
-    o->oShrinkTimer   = 0;
-    o->oVineScale     = 1.0f;
+    o->oShrinkTimer     =  0;
+    o->oVineScale       = (1.0f * (o->oBehParams2ndByte + 1));
+    o->oVineDistToMario = (400  * (o->oBehParams2ndByte + 1));
+    cur_obj_scale(o->oVineScale);
 }

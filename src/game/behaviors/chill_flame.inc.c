@@ -11,6 +11,10 @@ struct ObjectHitbox sChillFlameHitbox = {
 };
 
 void bhv_chill_flame_loop(void) {
+    if (gMarioObject->oPosY >= -800 && cur_obj_lateral_dist_to_home() > 500) {
+        obj_set_pos(o, o->oHomeX, o->oHomeY, o->oHomeZ);
+    }
+    
     switch (o->oHeldState) {
         case HELD_FREE:
             cur_obj_enable_rendering_and_become_tangible(o);
