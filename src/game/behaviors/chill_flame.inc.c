@@ -4,9 +4,9 @@ struct ObjectHitbox sChillFlameHitbox = {
     /* damageOrCoinValue: */ 0,
     /* health:            */ 1,
     /* numLootCoins:      */ 0,
-    /* radius:            */ 100,
+    /* radius:            */ 75,
     /* height:            */ 100,
-    /* hurtboxRadius:     */ 100,
+    /* hurtboxRadius:     */ 75,
     /* hurtboxHeight:     */ 100,
 };
 

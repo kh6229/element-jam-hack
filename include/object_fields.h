@@ -1258,7 +1258,6 @@
 /* Dead Vine */
 #define           oShrinkTimer   OBJECT_FIELD_S32(0x1B)
 #define           oVineScale     OBJECT_FIELD_F32(0x1C)
-#define           oChillFlameObj OBJECT_FIELD_S32(0x1D)
 
 /*Custom general defines:
 

@@ -142,6 +142,14 @@ feel slightly more at ease in this eerie cave.",
     "As you descend deeper, you find more of those vines\n\
 hanging from the ceiling. You were able to walk on them\n\
 with no problem, maybe you climb these?",
+
+    "It only gets colder as you go on, and you're feeling\n\
+unsure if it would get too cold for you to survive.\n\
+Still, you go on to see if you could get anything else.",
+
+    "These vines aren't moving, they look dead... They're\n\
+blocking the way as well. Maybe that strange blue flame\n\
+could come in handy?",
 };
 
 void render_bottom_box_text(u8 ID) {
