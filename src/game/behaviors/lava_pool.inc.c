@@ -35,6 +35,10 @@ void bhv_lava_pool_play_sounds(void) {
 }
 
 void bhv_lava_pool_activate(void) {
+    if (gMarioState->action == ACT_QUICKSAND_DEATH) {
+        o->oAction = 0;
+    }
+    
     if (o->oTimer > 120 && o->oTimer < 150) {
         cur_obj_shake_screen(SHAKE_POS_SMALL);
         bhv_lava_pool_play_sounds();
@@ -48,7 +52,7 @@ void bhv_lava_pool_activate(void) {
 }
 
 void bhv_lava_pool_idle(void) {
-    if (gMarioObject->oPosZ >= -1600) {
+    if (gMarioObject->oPosZ >= -1600 && gMarioState->action != ACT_QUICKSAND_DEATH) {
         o->oAction++;
     }
 }
