@@ -50,10 +50,13 @@ const LevelScript level_castle_grounds_entry[] = {
 		WARP_NODE(0xF0, LEVEL_CASTLE, 0x01, 0x32, WARP_NO_CHECKPOINT),
 		WARP_NODE(0xF1, LEVEL_CASTLE, 0x01, 0x64, WARP_NO_CHECKPOINT),
 		MARIO_POS(0x01, 0, 0, 80, 0),
+		OBJECT(MODEL_TOAD, 0, 0, 913, 0, 155, 0, 0x00010000, bhvToadMessage),
+		OBJECT(MODEL_TOAD, -500, 0, 487, 0, 85, 0, 0x03000000, bhvToadMessage),
+		OBJECT(MODEL_TOAD, 500, 0, 487, 0, -135, 0, 0x02000000, bhvToadMessage),
 		OBJECT(MODEL_NONE, 0, 80, 0, 0, 0, 0, (0x0A << 16), bhvSpinAirborneWarp),
 		TERRAIN(castle_grounds_area_1_collision),
 		MACRO_OBJECTS(castle_grounds_area_1_macro_objs),
-		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_GRASS),
+		STOP_MUSIC(0),
 		TERRAIN_TYPE(TERRAIN_GRASS),
 		/* Fast64 begin persistent block [area commands] */
 		/* Fast64 end persistent block [area commands] */

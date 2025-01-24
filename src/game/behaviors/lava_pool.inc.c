@@ -1,5 +1,6 @@
-u8 soundPlayed = 0;
-u8 soundTimer  = 0;
+u8 soundPlayed =  0;
+u8 soundTimer  =  0;
+u8 textRendered = 0;
 
 void bhv_lava_pool_rise(void) {
     if (gMarioObject->oPosY < -2100 && gMarioObject->oPosZ < -5900) {
@@ -47,7 +48,11 @@ void bhv_lava_pool_activate(void) {
     if (o->oTimer > 180) {
         o->oAction++;
         // Doesn't work with the ID for some fucking reason
-        play_secondary_music(0x26, 45, 70, 20);
+        play_secondary_music(0x26, 45, 45, 20);
+        if (textRendered == 0) {
+            gTextIsRendering = 0x10;
+            textRendered++;
+        }
     }
 }
 

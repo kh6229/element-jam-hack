@@ -150,6 +150,15 @@ Still, you go on to see if you could get anything else.",
     "These vines aren't moving, they look dead... They're\n\
 blocking the way as well. Maybe that strange blue flame\n\
 could come in handy?",
+
+    "It just seemed like darkness as far as you could see.\n\
+You swore to yourself that if you couldn't see anything\n\
+after this, you'd turn back.",
+
+    "Luckily, it didn't take long for you to find more\n\
+light, this time coming from above. Is this a way out?",
+
+    "Is that blue liquid... rising? Quick! Climb!!",
 };
 
 void render_bottom_box_text(u8 ID) {
