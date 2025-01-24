@@ -32,3 +32,4 @@
 #endif
 
 #include "skinned/model.inc.c"
+#include "mario_light/model.inc.c"

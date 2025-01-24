@@ -18,3 +18,4 @@
 #include "mario/geo.inc.c"
 
 #include "skinned/geo.inc.c"
+#include "mario_light/geo.inc.c"
