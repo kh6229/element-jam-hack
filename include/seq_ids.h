@@ -48,7 +48,8 @@ enum SeqId {
     SEQ_CAVE_AMBIENCE_2,              // 0x23
     SEQ_CAVE_AMBIENCE_3,              // 0x24
     SEQ_CAVE_AMBIENCE_4,              // 0x25
-    SEQ_COUNT
+    SEQ_ESCAPE,                       // 0x26
+    SEQ_COUNT,
 };
 
 #endif // SEQ_IDS_H

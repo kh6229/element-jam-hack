@@ -1710,6 +1710,13 @@ s32 execute_mario_action(UNUSED struct Object *obj) {
     vec3f_get_lateral_dist(gMarioState->prevPos, gMarioState->pos, &gMarioState->lateralSpeed);
     vec3f_copy(gMarioState->prevPos, gMarioState->pos);
 
+    if (gCurrentArea->index == 3) {
+        struct Object *lavaPool = cur_obj_nearest_object_with_behavior(bhvLavaPool);
+        if (lavaPool->oAction == 2 && gMarioState->pos[1] < lavaPool->oPosY && gMarioState->pos[2] > -1600) {
+            gMarioState->action = ACT_QUICKSAND_DEATH;
+        }
+    }
+
     if (gMarioState->action) {
 #ifdef ENABLE_DEBUG_FREE_MOVE
         if (

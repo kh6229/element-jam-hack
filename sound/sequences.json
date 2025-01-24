@@ -37,5 +37,6 @@
     "22_cutscene_lakitu": {"ifdef": ["VERSION_US", "VERSION_EU", "VERSION_SH"], "banks": ["1B"]},
     "23_cave_ambience_2": ["26_cave_ambience_2"],
     "24_cave_ambience_3": ["27_cave_ambience_3"],
-    "25_cave_ambience_4": ["28_cave_ambience_4"]
+    "25_cave_ambience_4": ["28_cave_ambience_4"],
+    "26_escape": ["0C_extended_bank"]
 }
